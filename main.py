@@ -1,5 +1,5 @@
 import random
-
+from image import logo
 cardNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 userNumbers = []
 computerNumbers = []
@@ -9,7 +9,7 @@ def game_start():
     userNumbers = []
     computerNumbers = []
 
-    gameChoice = input("Do you want to play a game of Blackjack? Enter 'y' to start the game. Enter 'n' to exit : ").lower()
+    gameChoice = input("Do you want to play a ga`me of Blackjack? Enter 'y' to start the game. Enter 'n' to exit : ").lower()
     print()
 
     if gameChoice == "n":
@@ -17,19 +17,7 @@ def game_start():
         return False
 
     elif gameChoice == "y":
-        print(r''' 
-        $$$$$$$\  $$\                     $$\                               $$\       
-        $$  __$$\ $$ |                    $$ |                              $$ |      
-        $$ |  $$ |$$ | $$$$$$\   $$$$$$$\ $$ |  $$\ $$\  $$$$$$\   $$$$$$$\ $$ |  $$\ 
-        $$$$$$$\ |$$ | \____$$\ $$  _____|$$ | $$  |\__| \____$$\ $$  _____|$$ | $$  |
-        $$  __$$\ $$ | $$$$$$$ |$$ /      $$$$$$  / $$\  $$$$$$$ |$$ /      $$$$$$  / 
-        $$ |  $$ |$$ |$$  __$$ |$$ |      $$  _$$<  $$ |$$  __$$ |$$ |      $$  _$$<  
-        $$$$$$$  |$$ |\$$$$$$$ |\$$$$$$$\ $$ | \$$\ $$ |\$$$$$$$ |\$$$$$$$\ $$ | \$$\ 
-        \_______/ \__| \_______| \_______|\__|  \__|$$ | \_______| \_______|\__|  \__|
-                                              $$\   $$ |                              
-                                              \$$$$$$  |                              
-                                               \______/                               
-          ''')
+        print(logo)
 
         user_cards1()
         user_round()
